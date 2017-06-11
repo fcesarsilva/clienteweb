@@ -39,7 +39,7 @@ public class ClienteServlet extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		
-		RequestDispatcher dispatcher = req.getRequestDispatcher("cliente.jsp"); //Encaminha a requisiÁ„o a p·gina .jsp que est· como par‚metro.
+		RequestDispatcher dispatcher = req.getRequestDispatcher("cliente.jsp"); //Encaminha a requisi√ß√£o a p√°gina .jsp que est√° como par√¢metro.
 		
 		req.setAttribute("lista", lista);
 		
@@ -47,15 +47,15 @@ public class ClienteServlet extends HttpServlet {
 		resp.setCharacterEncoding("UTF-8");
 		
 		
-		//System.out.println("Chamou pelo mÈtodo GET");// Para ter certeza que a requisiÁ„o estava chegando atÈ este ponto.
+		//System.out.println("Chamou pelo m√©todo GET");// Para ter certeza que a requisi√ß√£o estava chegando at√© este ponto.
 	}
 	
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		
 		//Recebendo email
-		String email = req.getParameter("email"); //A vari·vel email recebe as informaÁıes passadas pela vari·vel email enviada pelo http request
-		//System.out.println("Chamou pelo mÈtodo POST");
+		String email = req.getParameter("email"); //A vari√°vel email recebe as informa√ß√µes passadas pela vari√°vel email enviada pelo http request
+		//System.out.println("Chamou pelo m√©todo POST");
 		
 		//Associando o email ao cliente
 		Cliente cli = new Cliente();
@@ -64,16 +64,16 @@ public class ClienteServlet extends HttpServlet {
 		//Lista de clientes
 		lista.add(cli);
 		
-		RequestDispatcher dispatcher = req.getRequestDispatcher("cliente.jsp"); //Encaminha a requisiÁ„o a p·gina .jsp que est· como par‚metro.
+		RequestDispatcher dispatcher = req.getRequestDispatcher("cliente.jsp"); //Encaminha a requisi√ß√£o a p√°gina .jsp que est√° como par√¢metro.
 		req.setAttribute("msg", "Salvo com sucesso!");
 		req.setAttribute("lista", lista);
 		
 		dispatcher.forward(req, resp);//Faz o encaminhamento do fluxo, o request e o response
 		
-		//resp.sendRedirect("cliente"); //Redireciona o browser ‡ solicitar uma nova p·gina pelo doGET.
+		//resp.sendRedirect("cliente"); //Redireciona o browser √† solicitar uma nova p√°gina pelo doGET.
 		
-		//resp.setCharacterEncoding("UTF-8"); //Modifica a codificaÁ„o de caracteres para reconhecer o acento ortogr·fico
-		//resp.getWriter().print("Chamou pelo mÈtodo POST enviando o e-mail: " + email + "!"); //Esse mÈtodo envia mensagem de texto para o navegador do cliente.
+		//resp.setCharacterEncoding("UTF-8"); //Modifica a codifica√ß√£o de caracteres para reconhecer o acento ortogr√°fico
+		//resp.getWriter().print("Chamou pelo m√©todo POST enviando o e-mail: " + email + "!"); //Esse m√©todo envia mensagem de texto para o navegador do cliente.
 		
 	}
 	
@@ -85,7 +85,7 @@ public class ClienteServlet extends HttpServlet {
 	
 	@Override
 	protected void doPut(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
+		//???
 		
 	}
 	
